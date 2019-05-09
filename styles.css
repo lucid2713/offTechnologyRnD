@@ -60,10 +60,13 @@ header{
   min-height: 5vh;
 }
 .rnd-header{
-  /* background-color: #FF143C;
-  color: #FFFFFF; */
+  /* color: #FFFFFF; */
   /* color: #FF143C; */
   color: #000000;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
+  /* text-shadow: 4px 3px #000000; */
   text-align: center;
   font-weight: bold;
   font-size: 5.5rem;
@@ -199,9 +202,6 @@ button{
   line-height: 1.6;
 }
 #rnd-col{
-  /* margin: 20px auto; */
-  text-align: center;
-  /* padding: 20px; */
 }
 
 .flexboxRnD{
@@ -273,19 +273,23 @@ button{
   text-align: left;
 }
 
-.rnd-link{
+.col-link{
   margin: -20px 0 -20px 0;
+  text-align: center;
 }
-.rnd-link a{
+.col-link a{
   text-decoration: underline;
   color: #FF143C;
   /* color: #000000; */
 }
-.rnd-link a:hover{
+.col-link a:hover{
   /* color: #00FF7F; */
   background-color: #FF143C;
   color: #FFFFFF;
   /* background-color: #00FF7F; */
+}
+.col-list{
+
 }
 
 .d2-reports{
@@ -404,6 +408,20 @@ div.sound {
   color: #FF143C;
   background-color: rgba(255, 255, 255, 0.8);
 }
+.quote-4{
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.quote-4:hover{
+  color: #FF143C;
+}
+.quote-4 a{
+  text-decoration: underline;
+}
 .poem{
   width: 70%;
   max-width: 800px;
@@ -486,17 +504,23 @@ p{
   color: #000000;
   background-color: #00FF7F;
 }
+.p-r3{
+  padding: 20px;
+  margin: 20px;
+  /* border: 1px solid #FF143C; */
+  /* color: #FF143C; */
+  border: 1px solid #000000;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.p-r3:hover{
+  border: 1px solid #FF143C;
+  color: #FF143C;
+}
 .r3-text{
   display: flex;
   flex-direction: column;
-  /* width: 70%; */
-  /* justify-content: center; */
   align-items: center;
-  /* right: 0
-  left: 80%; */
-  margin-left: 10%;
-  /* background-color: rgba(255, 20, 60, 0.3); */
-  background-color: rgba(255, 255, 255, 0.8);
 }
 .d-title{
   text-align: center;
@@ -507,7 +531,8 @@ p{
   font-weight: bold;
   padding: 0;
   margin-top: -30px;
-  font-size: 10vw;
+  /* font-size: 10vw; */
+  font-size: 2rem;
 }
 .r1-title{
   text-align: center;
@@ -517,8 +542,10 @@ p{
   color: #FF143C;
   padding: 0;
   margin-top: -30px;
-  /* font-size: 3rem; */
-  font-size: 10vw;
+  /* margin-bottom: 100px; */
+  /* height: 50%; */
+  font-size: 2rem;
+  /* font-size: 10vw; */
   font-weight: bold;
 }
 .r2-title h1{
@@ -540,7 +567,7 @@ p{
 }
 .r3-title{
   text-align: center;
-  color: #FF143C;
+  /* color: #FF143C; */
   /* text-decoration: underline; */
   font-weight: bold;
   font-size: 1.6rem;
@@ -577,30 +604,32 @@ p{
 }
 .r3-contents{
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 10px auto;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0 auto;
   /* padding: 10px; */
-  width: 70%;
+  width: 100%;
   font-size: 1.3rem;
   font-weight: normal;
   line-height: 1.6;
+  justify-content: center;
 }
 .r3-wrapper{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-}
-.r3w-1{
   width: 30%;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.r3-wrapper:hover{
+  /* background-color: rgba(255, 20, 60, 0.3); */
+  color: #FF143C;
+
+}
+/* .r3w-1{
 }
 .r3w-2{
-  width: 70%;
-  margin: 0 20px 0 -20px;
-}
+} */
 
 .footnote{
   font-size: 1rem;
@@ -646,7 +675,8 @@ audio{
   right: 0;
   z-index: 99;
   /* border: 1px solid #FF143C; */
-  color: #00FF7F;
+  /* color: #00FF7F; */
+  color: #FF143C;
   background-color: transparent;
   cursor: pointer;
   text-align: center;
@@ -661,7 +691,8 @@ audio{
   background: none;
   /* background-color: #00FF7F; */
   /* color: #FFFFFF; */
-  color: #FF143C;
+  /* color: #FF143C; */
+  color: #00FF7F;
 }
 
 #topBtn {
@@ -701,6 +732,7 @@ footer{
   color: #000000;
   width: 100%;
   /* height: 60px; */
+  font-size: 1rem;
 }
 
 .navbar{
@@ -744,15 +776,14 @@ footer{
     flex-direction: column;
   }
   .r3-wrapper{
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
   }
-  .r3w-1{
+  /* .r3w-1{
     width: 100%;
   }
   .r3w-2{
     width: 100%;
-  }
+  } */
   .poem{
     width: 80%;
   }
