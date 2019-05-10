@@ -398,10 +398,10 @@ div.sound {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
   color: #000000;
-  width: 30%;
+  width: 50%;
 }
 .quote-2:hover{
-  /* color: #FF143C; */
+  color: #FF143C;
 }
 .quote-3{
   font-style: italic;
@@ -439,6 +439,8 @@ div.sound {
   margin : 10px;
   padding: 10px;
   text-align: center;
+  align-items: center;
+  width: 100%;
 }
 .wrap-title{
   background-color: #FF143C;
@@ -470,19 +472,28 @@ p{
   background: rgba(255, 255, 255, 0.8);
 }
 .p-r1{
-  border: 1px solid #FF143C;
+  border: 1px solid #00FF7F;
   background-color: rgba(255, 255, 255, 0.8);
-  color: #FF143C;
-  /* color: #000000; */
+  color: #000000;
   width: 50%;
   padding: 20px;
-  margin: 20px;
+  margin: 20px 0 20px -25%;
 }
 .p-r1:hover{
-  /* border-color: #FF143C;
-  color: #FF143C; */
-  border-color: #00FF7F;
+  border-color: #FF143C;
+  color: #FF143C;
+}
+.p-r1-2{
+  border: 1px solid #00FF7F;
+  background-color: rgba(255, 255, 255, 0.8);
   color: #000000;
+  width: 50%;
+  padding: 20px;
+  margin: 20px -25% 20px 0;
+}
+.p-r1-2:hover{
+  border-color: #FF143C;
+  color: #FF143C;
 }
 .p-d3{
   width: 70%;
@@ -569,7 +580,7 @@ p{
 }
 .rt-contents{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   width: 80%;
@@ -771,11 +782,19 @@ footer{
   .poem{
     width: 80%;
   }
-  .p-rt{
+  .p-r1{
     width: 80%;
+    margin-left: 0;
+  }
+  .p-r1-2{
+    width: 80%;
+    margin-right: 0;
   }
   .quote-2{
     width: 80%;
+  }
+  .wrapper{
+    width: 90%;
   }
   .research-text{
     padding: 20px 0 20px 0;
