@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-    <!-- <script src="scroll.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
     <title>eno kit</title>
     <style media="screen">
     @@font-face {
@@ -15,6 +14,16 @@
     }
     *{
       box-sizing: border-box;
+    }
+    ::-moz-selection { /* Code for Firefox */
+      background: #00FF7F;
+    }
+    ::selection {
+      background: #00FF7F;
+    }
+    a{
+      color: #000000;
+      text-decoration: none;
     }
     header{
       text-align: center;
@@ -24,30 +33,143 @@
       min-height: 5vh;
     }
     body{
-      background-image: url(../assets/kit/background_board-02.svg);
+      padding: 0;
+      margin: 0;
+      font-family: "Times New Roman", Times, serif;
+      font-weight: normal;
+      font-size: 16px;
+      font-size: 1vmax;
+      font-style: normal;
+      background-image: url(../assets/kit/background_board-04.svg);
       background-repeat: repeat;
-      /* background-size: 20vw; */
       background-color: #FF143C;
-      /* background-position: center; */
-      background-size: 10%;
-      /* background-attachment: scroll; */
+      background-size: 20%;
+
     }
+    #text{
+      width: 90%;
+      padding: 20px;
+      margin: 0 auto;
+      font-weight: bold;
+      /* font-size: 8rem; */
+      font-size: 8vw;
+      font-style: normal;
+      -webkit-text-fill-color: #000000;
+      -webkit-text-stroke-width: 1px;
+      /* -webkit-text-stroke-color: #00FF7F; */
+      -webkit-text-stroke-color: #FFFFFF;
+      text-shadow: 2px 2px 5px #FFFFFF;
+    }
+    .video-container{
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 30px;
+      height: 0;
+      overflow: hidden;
+    }
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+      padding: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .content{
+      margin: 0 auto;
+      padding: 20px;
+      width: 30%;
+    }
+    .outLinks{
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      background-color: #FF143C;
+    }
+    .link-img{
+      padding: 0;
+    }
+
+    .img-parts{
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+    }
+    .img-eachParts{
+      width: 20%;
+    }
+    .img-kit{
+      width: 25%;
+      margin: 0 20px 0 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .description{
+      margin: 0 auto;
+      padding: 0;
+      font-size: 1.2rem;
+      text-align: center;
+      line-height: 1.2;
+      background-color: #FF143C;
+      /* background-color: #000000; */
+      /* color: #FF143C; */
+      color: #FFFFFF;
+      display:inline-block;
+    }
+    .description a{
+      color: #FFFFFF;
+      text-decoration: underline;
+      text-decoration-color: #FFFFFF;
+    }
+    .videocaption{
+      text-align: center;
+    }
+
     footer{
+      background-color: #FF143C;
       margin: 0 auto;
       padding: 10px;
       text-align: center;
-      background: transparent;
       color: #000000;
       width: 100%;
       font-size: 1rem;
-      position: absolute;
-      bottom: 10px;
+      position: relative;
     }
     @media screen and (max-width: 800px){
       body{
-        /* background-size: contain; */
-        background-size: 25%;
-
+        background-size: 50%;
+      }
+      .img-parts{
+        flex-direction: column;
+      }
+      .img-eachParts{
+        width: 50%;
+      }
+      .img-kit{
+        width: 50%;
+      }
+      .content{
+        width: 60%;
+      }
+      #text{
+        font-size: 10vw;
+      }
+      .description{
+        font-size: 1rem;
       }
     }
     </style>
@@ -55,18 +177,81 @@
   </head>
   <body>
     <header>
-      <!-- <a href="../index.html" class="backBtn">&#9668;</a> -->
     </header>
 
     <main>
 
-      <!-- <img src="../assets/kit/moon-board.svg" alt="moon-board" width="300px"> -->
+      <div class="img-parts">
+        <img src="../assets/kit/electricPaint.png" alt="electric paint" title="electric paint" class="img-eachParts">
+        <img src="../assets/kit/battery.png" alt="battery" title="battery" class="img-eachParts">
+        <img src="../assets/kit/jumperWire.png" alt="jumper wire" title="jumper wire" class="img-eachParts">
+        <img src="../assets/kit/audioJack.png" alt="audio jack" title="audio jack" class="img-eachParts">
+        <img src="../assets/kit/breadBoard.png" alt="bread board" title="bread board" class="img-eachParts">
+        <img src="../assets/kit/alligatorClip.png" alt="alligator clip" title="alligator clip" class="img-eachParts">
+        <img src="../assets/kit/chip.png" alt="chip" title="chip" width="20%">
+        <img src="../assets/kit/jumperAlli.png" alt="alligator clip wire" title="alligator clip wire" class="img-eachParts">
+      </div>
+      <p>&nbsp;</p><p>&nbsp;</p>
 
+      <div id="text">
+        <!-- <br> -->
+        ENO KIT is a DIY(Do It Yourself) kit for e-waste analog synthesizer.
+        <br><br><br>
+        ENO KIT helps you build your own e-waste synth easily and amusedly.
+        <br><br><br>
+        ENO KIT is designed as a part of '<a href="https://lucid2713.github.io/offTechnologyRnD/" target="_blank"><i>off technology R&D</i></a>'.
+        <br><br><br>
+        ENO KIT is made by MINA (VITAMINA).
+        <br><br><br>
+      </div>
 
+      <div class="img-parts">
+        <img src="../assets/kit/enoKit.jpg" alt="eno kit" title="eno kit" class="img-kit">
+      </div>
+
+      <div class="img-parts">
+        <img src="../assets/kit/kit-manual-1.jpg" alt="manual1" title="manual 1" class="img-kit">
+        <img src="../assets/kit/kit-manual-2.jpg" alt="manual2" title="manual 2" class="img-kit">
+      </div>
+
+      <div class="img-parts">
+        <img src="../assets/kit/kitDisplay1.jpg" alt="kit display1" title="kit display1" class="img-kit">
+        <img src="../assets/kit/kitDisplay3.jpg" alt="kit display3" title="kit display3" class="img-kit">
+        <img src="../assets/kit/kitDisplay2.jpg" alt="kit display2" title="kit display2" class="img-kit">
+      </div>
+
+      <div class="img-parts">
+        <img src="../assets/kit/workshop1.jpg" alt="workshop1" title="workshop image1" class="img-kit">
+        <img src="../assets/kit/workshop2.jpg" alt="workshop2" title="workshop image2" class="img-kit">
+      </div>
+
+      <div class="content">
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FkuBKdk0KLI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jaEIZozcGg0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-container">
+        <iframe width="560" height="315"s src="https://www.youtube.com/embed/qOA08h7SZnU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+      <div class="videocaption">
+        <p class="description">
+          Jam during eno Kit workshop<br>
+          Presentation at <a href="https://www.facebook.com/etatspace30/" target="_blank">ETAT space</a>, 27.04.2019
+        </p>
+        <br><br>
+      </div>
+      <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
 
     </main>
 
     <footer>
+      <div class="outLinks">
+        <a href="https://lucid2713.github.io/offTechnologyRnD/" target="_blank"><img src="../assets/illust/wasted06.jpg" alt="off technology R&D" class="link-img" width="150px"></a>
+        <a href="http://handmade-electronic-art.com/" target="_blank"><img src="../assets/kit/zine.png" alt="zine - handmade electronics" class="link-img" width="200px"></a>
+      </div>
       <div id="footer-copyright">copy right & made by mina</div>
     </footer>
 
