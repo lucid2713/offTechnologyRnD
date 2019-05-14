@@ -594,6 +594,9 @@ p{
   margin: -25px auto;
   padding: 20px 70px 20px 70px;
 }
+.journal{
+  font-weight: normal;
+}
 .d1-contents{
   display: flex;
   flex-direction: column;
@@ -638,12 +641,12 @@ p{
 }
 .d1t-right{
   width: 60%;
-  margin: 0;
+  /* margin: 0; */
   margin: 10px 0 10px 10px;
   padding: 10px;
   right: 0;
   border: 1px solid transparent;
-  border-style:
+
 }
 .d1t-right:hover{
   border-color: #00FF7F;
@@ -652,6 +655,11 @@ p{
 .p-d1{
   margin-left: 20px;
   background-color: rgba(255, 255, 255, 0.8);
+}
+.p-d2{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  margin: 10px;
 }
 .d1t-right ul{
   margin: 10px;
@@ -693,6 +701,48 @@ p{
   margin: 10px auto;
   color: #000000;
   justify-content: center;
+}
+.d2-text{
+  width: 60%;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px dashed #00FF7F;
+  align-items: center;
+}
+.d2-one{
+  margin: 10px;
+  width: 60%;
+}
+.d2-one h3{
+  margin-top: 10px;
+  background-color: #00FF7F;
+  text-align: center;
+}
+.d2-two{
+  width: 90%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid transparent;
+}
+.d2-two:hover{
+  border-color: #00FF7F;
+}
+.d2-two h5{
+  /* text-align: center; */
+  padding-left: 30px;
+  text-shadow: 2px 2px #00FF7F;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.d2-two h4{
+  padding-left: 30px;
+  text-decoration: underline;
+  text-decoration-color: #00FF7F;
+  text-shadow: 2px 2px #FFFFFF;
 }
 .rt-contents{
   display: flex;
@@ -913,6 +963,9 @@ footer a{
     width: 100%;
   }
   .d1t-right{
+    width: 100%;
+  }
+  .d2-two{
     width: 100%;
   }
   .rt-contents{
