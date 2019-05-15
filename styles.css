@@ -977,8 +977,8 @@ footer a{
   line-height: 1.6;
   position: fixed;
   bottom: 0;
-  /* background-color: #00FF7F; */
-  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* background-color: #FFFFFF; */
   width: 100%;
   -webkit-animation-name: slideIn;
   -webkit-animation-duration: 0.4s;
@@ -987,7 +987,7 @@ footer a{
 }
 /* The Close Button */
 .close {
-  color: #00FF7F;
+  color: #FF143C;
   float: right;
   font-size: 50px;
   font-weight: bold;
@@ -995,14 +995,15 @@ footer a{
 }
 .close:hover,
 .close:focus {
-  color: #FF143C;
+  color: #00FF7F;
   text-decoration: none;
   cursor: pointer;
 }
 .modal-header {
   padding: 2px 16px;
   /* padding: 2px -20px 2px 0;; */
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
+  background-color: transparent;
   color: #00FF7F;
   text-align: center;
 }
@@ -1022,7 +1023,8 @@ footer a{
 .modal-footer {
   /* padding: 2px 16px; */
   padding: 0 2px;
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
+  background-color: transparent;
   color: #000000;
   text-align: center;
 }
@@ -1130,5 +1132,8 @@ footer a{
   }
   .sampleImg{
     width: 100%;
+  }
+  .col-content{
+    width: 90%;
   }
 }
