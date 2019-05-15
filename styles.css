@@ -972,9 +972,11 @@ footer a{
 }
 /* Modal Content */
 .modal-content {
+  line-height: 1.6;
   position: fixed;
   bottom: 0;
-  background-color: #00FF7F;
+  /* background-color: #00FF7F; */
+  background-color: #FFFFFF;
   width: 100%;
   -webkit-animation-name: slideIn;
   -webkit-animation-duration: 0.4s;
@@ -983,7 +985,7 @@ footer a{
 }
 /* The Close Button */
 .close {
-  color: #FFFFFF;
+  color: #00FF7F;
   float: right;
   font-size: 50px;
   font-weight: bold;
@@ -996,10 +998,10 @@ footer a{
   cursor: pointer;
 }
 .modal-header {
-  /* padding: 2px 16px; */
-  padding: 2px;
-  background-color: #00FF7F;
-  color: #FFFFFF;
+  padding: 2px 16px;
+  /* padding: 2px -20px 2px 0;; */
+  background-color: #FFFFFF;
+  color: #00FF7F;
   text-align: center;
 }
 
@@ -1007,13 +1009,19 @@ footer a{
   /* padding: 2px 16px; */
   padding: 2px;
   text-align: center;
+  margin: 0;
+}
+.modal-body h1{
+  color: #FF143C;
+  margin: 0;
+  padding: 0 0 10px 2=30px;
 }
 
 .modal-footer {
   /* padding: 2px 16px; */
-  padding: 2px 16px;
-  background-color: #00FF7F;
-  color: #FFFFFF;
+  padding: 0 2px;
+  background-color: #FFFFFF;
+  color: #000000;
   text-align: center;
 }
 /* Add Animation */
