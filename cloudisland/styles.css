@@ -168,6 +168,9 @@ main {
   font-size: 1.2rem;
   line-height: 1.7rem;
 }
+#intro a{
+  color: #DCDCDC;
+}
 .conText .interviewList{
   font-size: 2.5rem;
   line-height: 4rem;
