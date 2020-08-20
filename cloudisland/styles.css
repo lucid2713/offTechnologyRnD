@@ -339,7 +339,7 @@ main {
   height: 24em;
   padding: 2.8em;
   /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
-  border: dashed 1px;
+  /* border: dashed 1px; */
   border-radius: 50%;
   margin: 1.75em auto 0;
 }
@@ -355,7 +355,7 @@ main {
   margin: -5em;
 }
 .circle-container a:hover{
-  border: solid 2px yellow;
+  border: solid 2px rgba(255, 255, 0, 0);
 }
 .circle-container img {
   display: block;
