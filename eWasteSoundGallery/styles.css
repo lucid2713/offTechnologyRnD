@@ -1,0 +1,110 @@
+*{
+  box-sizing: border-box;
+}
+canvas {
+	z-index: -3;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+::-moz-selection {
+  /* Code for Firefox */
+  background: #181aff;
+  color: white;
+}
+::selection {
+  background: #181aff;
+  color: white;
+}
+a{
+  color: black;
+}
+header{
+  color: black;
+  /* color: white; */
+  /* padding: 10px; */
+  text-align: center;
+}
+header h1{
+  padding: 10px;
+  margin: 0 auto;
+  width: 70%;
+  font-weight: bold;
+  font-size: 5rem;
+  /* color: #000000;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000; */
+}
+header p{
+  margin: 0 auto;
+  width: 70%;
+  margin-bottom: 10px;
+  /* margin-top: 5px; */
+  text-align: justify;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.sections{
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* color: white; */
+  color: black;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.sections h1{
+  margin-bottom: 25px;
+}
+.sections span{
+  background-color: black;
+  color: white;
+}
+.sections p{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: justify;
+  width: 70%;
+  /* padding: 10px; */
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.gallery{
+  margin: 20px auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.objects{
+  cursor: pointer;
+  z-index: 1;
+  width: 300px;
+  margin: 20px;
+  padding: 0;
+  text-align: center;
+  filter: drop-shadow(5px 5px 10px gray);
+}
+.objects:hover{
+    filter: drop-shadow(5px 5px 10px #181aff);
+}
+.thanksTo{
+  padding: 20px;
+  width: 70%;
+  font-size: 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+footer{
+  font-size: 0.8=9rem;
+  padding-bottom: 5px;
+  margin: 0 auto;
+  text-align: center;
+}
